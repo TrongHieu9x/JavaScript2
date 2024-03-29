@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá Hoa Quả</title>
+</head>
+<body>
+<select id="fruit">
+    <option value="50.000 VNĐ/kg">Măng Cụt</option>
+    <option value="40.000 VNĐ/kg">Chôm Chôm</option>
+    <option value="35.000 VNĐ/kg">Cam</option>
+    <option value="30.000 VNĐ/kg">Xoài</option>
+    <option value="25.000 VNĐ/kg">Táo</option>
+    <option value="15.000 VNĐ/kg">Dưa Hấu</option>
+    <option value="20.000 VNĐ/kg">Ổi</option>
+</select>
+<button onclick="price()">Xem Giá</button>
+<h1 id="price"></h1>
+<script>
+    function price() {
+        let  f = document.getElementById("fruit").value;
+        let price = f
+        document.getElementById("price").innerHTML = price;
+        // let b
+    }
+</script>
+</body>
+</html>

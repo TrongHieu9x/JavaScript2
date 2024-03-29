@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LaiSuat</title>
+</head>
+<body>
+    <script>
+        // Đọc dữ liệu từ người dùng
+        var soTienVay = parseInt(prompt("Nhập số tiền vay (triệu đồng):"));
+        var laiSuat = parseFloat(prompt("Nhập lãi suất (%/năm):"));
+        var soNam = parseInt(prompt("Nhập số năm vay:"));
+
+        // // Tính số tiền sau n năm
+        var tongTien = soTienVay + soNam * laiSuat;
+
+        // // Hiển thị kết quả
+        alert("Số tiền phải trả sau " + soNam + " năm là: " + tongTien + " triệu đồng");
+    </script>
+</body>
+</html>
