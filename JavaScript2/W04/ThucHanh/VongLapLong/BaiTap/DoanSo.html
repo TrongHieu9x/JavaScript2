@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán Số</title>
+</head>
+<body>
+<button onclick="choi()">Chơi</button>
+<script>
+    function choi() {
+        var number = +prompt("Nhập vào số mà bạn cho là đúng:");
+        var randomNumber = Math.floor(Math.random() * (number - 1)) + 1;
+        console.log(randomNumber);
+        let guess;
+        var count = 1;
+
+        do {
+            guess = parseInt(prompt("Có 3 cơ hội:))"))
+            if (guess > randomNumber && count < 3) {
+                alert("Nhẹ nhàng thui!!!");
+                count++;
+            } else if (guess < randomNumber && count < 3) {
+                alert("Mạnh mẽ lên @_@");
+                count++;
+            } else if (guess == randomNumber) {
+                alert("Hack àkkkkkkkkk")
+                break;
+            } else {
+                alert("Nạp lần đầu đi");
+                break;
+            }
+        }while (true);
+
+        // while (number < 3) {
+        //     var guess = parseInt(prompt("Nhập vào giá trị bạn đoán (tối đa 3 lần):"));
+        //     if (isNaN(guess)) {
+        //         alert("Vui lòng nhập một số hợp lệ.");
+        //         continue;
+        //     }
+        //     if (guess === randomNumber) {
+        //             alert("Chúc mừng! Bạn đã đoán đúng số.");
+        //             break;
+        //         } else if (guess < randomNumber) {
+        //             alert("Số bạn đoán nhỏ hơn số cần tìm.");
+        //         } else {
+        //             alert("Số bạn đoán lớn hơn số cần tìm.");
+        //         }
+        //         number++;
+        //     }
+        //
+        // if (number === 3) {
+        //     alert("Bạn đã hết cơ hội. Số cần tìm là: " + randomNumber);
+        // }
+    }
+</script>
+</body>
+</html>

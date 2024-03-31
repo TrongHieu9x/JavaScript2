@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Nhập vào một số nguyên dương:</h2>
+    <input type="text" id="numberInput">
+    <button onclick="reverseNumber()">Đảo ngược số</button>
+    <p id="resultOutput"></p>
+
+    <script>
+        function reverseNumber() {
+            var input = document.getElementById("numberInput").value;
+            var number = parseInt(input);
+            var reversedNumber = 0;
+
+            // Kiểm tra xem đầu vào có phải là số nguyên dương không
+            if (isNaN(number) || number <= 0) {
+                document.getElementById("resultOutput").innerText = "Vui lòng nhập một số nguyên dương lớn hơn 0.";
+                return;
+            }
+
+            // Tính số đảo ngược của số
+            var temp = number;
+            while (temp > 0) {
+                var digit = temp % 10; // Lấy chữ số cuối cùng của số
+                reversedNumber = reversedNumber * 10 + digit; // Thêm chữ số vào đầu của số đảo ngược
+                temp = Math.floor(temp / 10); // Loại bỏ chữ số cuối cùng của số
+            }
+
+            // Hiển thị kết quả
+            document.getElementById("resultOutput").innerText = "Số đảo ngược của " + input + " là: " + reversedNumber;
+        }
+    </script>
+</body>
+</html>
